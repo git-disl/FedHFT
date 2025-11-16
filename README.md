@@ -7,3 +7,9 @@ Paper link: https://arxiv.org/abs/2510.14054
 Example usage:
 
 `python main.py --data $DATASET --arch $ARCH --use-valid --device $DEVICE --num_clusters $NUM_CLUSTERS --vertical_scale_ratios $MASK_RATIO` 
+
+To experiment with new datasets, check `data_tools.dataloader` and add the data preparation utility function which will be called by `prepare_datasets`. 
+
+To experiment with new models, extend the model and tokenizer dispatchers in `main.py`.
+
+Federated finetuning logic is implemented in `fed.py`.
